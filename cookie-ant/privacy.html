@@ -30,11 +30,12 @@
 
       <h2>What the extension accesses</h2>
       <ul>
-        <li><b>Cookies</b> (<code>cookies</code> permission, all site access): the extension reads cookies only when you open its page, to list them by domain so that you can choose which ones to export. When you import a file, it writes only the cookies you select and confirm.</li>
-        <li><b>Downloads</b> (<code>downloads</code> permission): used only to save the JSON export file you request to your computer.</li>
+        <li><b>Cookies</b> (<code>cookies</code> permission): the extension reads cookies only when you open it, to list them so you can choose what to export or copy. When you import a file, it writes only the cookies you select and confirm.</li>
+        <li><b>Site access</b> (optional): Chrome only lets extensions read and write cookies for sites they may access. Cookie Ant asks for this only when you first use it, either for the current site or for all sites, and you can revoke it anytime in Chrome's extension settings. It never reads page content or injects scripts.</li>
+        <li><b>Active tab</b> (<code>activeTab</code> permission): when you click the toolbar icon, the extension reads the address of the current tab to show quick actions for that site.</li>
         <li><b>Storage</b> (<code>storage</code> permission): keeps two values on your device only, how many exports and imports have succeeded and whether you dismissed the rating reminder. No cookie data is stored.</li>
-        <li><b>Tabs</b> (<code>tabs</code> permission): used only to find and focus an already open Cookie Ant page instead of opening a duplicate.</li>
-        <li><b>Files you import</b>: the JSON file you choose is read in memory on your device and is never uploaded.</li>
+        <li><b>Files you import</b>: the JSON or cookies.txt file you choose is read in memory on your device and is never uploaded. Exports are saved through Chrome's normal download flow.</li>
+        <li><b>Clipboard</b>: when you choose "Copy as Cookie header" or "Copy as curl command", the text is written to your clipboard. The extension never reads your clipboard.</li>
       </ul>
 
       <h2>What the extension does not do</h2>
@@ -62,11 +63,12 @@
 
       <h2>扩展会访问的内容</h2>
       <ul>
-        <li><b>Cookie</b>（<code>cookies</code> 权限及所有网站访问权限）：仅在你打开扩展页面时读取 Cookie，按域名列出以便你选择导出内容；导入时只写入你选择并确认的 Cookie。</li>
-        <li><b>下载</b>（<code>downloads</code> 权限）：仅用于把你请求导出的 JSON 文件保存到本机。</li>
+        <li><b>Cookie</b>（<code>cookies</code> 权限）：仅在你打开扩展时读取 Cookie，供你选择要导出或复制的内容；导入时只写入你选择并确认的 Cookie。</li>
+        <li><b>网站访问权限</b>（可选）：Chrome 只允许扩展读写已授权网站的 Cookie。Cookie Ant 只在你首次使用时请求授权，可以只授权当前网站，也可以授权所有网站，并可随时在 Chrome 扩展设置中撤销。它从不读取网页内容，也不注入脚本。</li>
+        <li><b>当前标签页</b>（<code>activeTab</code> 权限）：点击工具栏图标时读取当前标签页的地址，以显示该网站的快捷操作。</li>
         <li><b>存储</b>（<code>storage</code> 权限）：仅在本机保存两个值，即成功导出/导入的次数，以及你是否关闭了评分提示。不保存任何 Cookie 数据。</li>
-        <li><b>标签页</b>（<code>tabs</code> 权限）：仅用于找到并切换到已打开的 Cookie Ant 页面，避免重复打开。</li>
-        <li><b>你导入的文件</b>：所选 JSON 文件只在本机内存中读取，绝不上传。</li>
+        <li><b>你导入的文件</b>：所选 JSON 或 cookies.txt 文件只在本机内存中读取，绝不上传。导出文件通过 Chrome 正常的下载流程保存。</li>
+        <li><b>剪贴板</b>：当你选择"复制为 Cookie 请求头"或"复制为 curl 命令"时，文本会写入剪贴板。扩展从不读取你的剪贴板。</li>
       </ul>
 
       <h2>扩展不会做的事</h2>

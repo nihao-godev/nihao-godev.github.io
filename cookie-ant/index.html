@@ -117,7 +117,7 @@
               <div class="row"><b>Store ID · Partition key</b></div>
             </div>
             <h3>Faithful round-trips</h3>
-            <p>Keeps every attribute Chrome allows, and reads plain cookie JSON arrays too.</p>
+            <p>Keeps every attribute Chrome allows. Works with JSON and the cookies.txt format used by curl, wget and yt-dlp.</p>
           </article>
         </div>
       </div>
@@ -178,8 +178,8 @@
           <details><summary>Does it upload my cookies anywhere?</summary><p>No. Everything happens inside your browser. The extension makes no network requests, and the only file it creates is the export you choose to save.</p></details>
           <details><summary>Which browsers does it work in?</summary><p>Google Chrome, plus Chromium-based browsers that install from the Chrome Web Store, such as Microsoft Edge, Brave and Opera.</p></details>
           <details><summary>Can I share an exported file?</summary><p>Please don't. Exported cookies can contain active login sessions, so anyone with the file may be able to sign in as you. Keep exports private and delete them when you're done.</p></details>
-          <details><summary>Why does it need access to all sites?</summary><p>Chrome only lets an extension read or write cookies for sites it has access to. You decide which sites to export or import, so it needs access to all of them. It never reads page content or injects scripts.</p></details>
-          <details><summary>What file format does it use?</summary><p>A readable JSON file. Imports also accept plain JSON arrays of cookies from other tools.</p></details>
+          <details><summary>Why does it ask for site access?</summary><p>Chrome only lets an extension read or write cookies for sites it has access to. Cookie Ant installs with no site access at all and asks only when you first use it, for just the current site or for all sites. It never reads page content or injects scripts, and you can revoke access anytime.</p></details>
+          <details><summary>What file formats does it support?</summary><p>Readable JSON and the classic Netscape cookies.txt format used by curl, wget and yt-dlp, for both export and import. Plain JSON arrays of cookies from other tools work too. You can also copy the current page's cookies as a Cookie header or a ready-to-run curl command.</p></details>
         </div>
       </div>
     </section>
